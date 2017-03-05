@@ -1,0 +1,9 @@
+﻿<Application x:Class="App_For_Accounting_Products_In_Fridge.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
