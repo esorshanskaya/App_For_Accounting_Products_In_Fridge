@@ -21,7 +21,9 @@ namespace App_For_Accounting_Products_In_Fridge
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        { List<Product> _currentProductsInFridge = new List<Product>();
+          List<Product> _necessaryProductsInFridge = new List<Product>();
+
             InitializeComponent();
         }
     }
