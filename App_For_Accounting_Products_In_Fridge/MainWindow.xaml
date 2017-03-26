@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="506.075" Width="643.226">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+    </Window.Background>
+
+    <Grid Margin="-86,0,26.667,1.667">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Button x:Name="button1" Content="Продукты&#xD;&#xA; в холодильнике" HorizontalAlignment="Left" Height="65" Margin="415,79,0,0" VerticalAlignment="Top" Width="142" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Продукты с &#xD;&#xA;истекающим сроком&#xD;&#xA;годности" HorizontalAlignment="Left" Height="74" Margin="255,144,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button x:Name="button3" Content="" HorizontalAlignment="Left" Height="72" Margin="415,216,0,0" VerticalAlignment="Top" Width="142"/>
+      
+        <Button x:Name="necessaryFoodButton" Content="Необходимые &#xD;&#xA;продукты" HorizontalAlignment="Left" Height="73" Margin="255,10,0,0" VerticalAlignment="Top" Width="138" Click="button_Click"/>
     </Grid>
 </Window>

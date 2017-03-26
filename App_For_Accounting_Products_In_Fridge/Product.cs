@@ -71,5 +71,11 @@ namespace App_For_Accounting_Products_In_Fridge
             _expirationDate = expirationDate;
             
         }
+        public Product(string name)
+        {
+            _name = name;
+
+        }
+
     }
 }
