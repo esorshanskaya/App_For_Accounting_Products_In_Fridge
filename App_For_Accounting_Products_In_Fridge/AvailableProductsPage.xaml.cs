@@ -16,21 +16,17 @@ using System.Windows.Shapes;
 namespace App_For_Accounting_Products_In_Fridge
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AvailableProductsPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    { 
-        List<Product> _currentProductsInFridge = new List<Product>();
-        List<Product> _necessaryProductsInFridge = new List<Product>();
-        List<Product> _shoppingList = new List<Product>();
-        public MainWindow()
+    public partial class AvailableProductsPage : Page
+    {
+        public AvailableProductsPage()
         {
-
             InitializeComponent();
-            frameMain.Navigate(new MainPage());
         }
-  
-   
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
-    }
-
+}

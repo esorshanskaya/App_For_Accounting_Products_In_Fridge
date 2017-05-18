@@ -1,0 +1,18 @@
+﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.AvailableProductsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="AvailableProductsPage">
+
+    <Grid Margin="0,0,-179,-36">
+        <Button x:Name="listofProductsButton" Content="Посмотреть список имеющихся в холодильнике продуктов" HorizontalAlignment="Left" Height="55" Margin="27,26,0,0" VerticalAlignment="Top" Width="395"/>
+        <Button x:Name="expiringProductsButton" Content="Продукты с истекающим сроком годности" HorizontalAlignment="Left" Height="59" Margin="27,99,0,0" VerticalAlignment="Top" Width="395"/>
+        <Button x:Name="expiredProductsButton" Content="Продукты с истекшим сроком годности" HorizontalAlignment="Left" Height="51" Margin="27,175,0,0" VerticalAlignment="Top" Width="395"/>
+        <Button x:Name="goBackButton" Content="Назад" HorizontalAlignment="Left" Height="44" Margin="10,282,0,0" VerticalAlignment="Top" Width="120" Click="backButton_Click"/>
+
+    </Grid>
+</Page>

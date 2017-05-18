@@ -1,0 +1,17 @@
+﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.StartingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="StartingPage">
+
+    <Grid>
+        <Button x:Name="ProductsForPurchaseButton" Content="Создать список покупок" HorizontalAlignment="Left" Height="35" Margin="10,0,0,0" VerticalAlignment="Top" Width="280" Click="ProductsForPurchaseButton_Click"/>
+        <Button x:Name="AvailableProductsButton" Content="Имеющиеся в холодильнике продукты" HorizontalAlignment="Left" Height="34" Margin="10,40,0,0" VerticalAlignment="Top" Width="280"  Click="AvailableProductsButton_Click"/>
+        <Button x:Name="necessaryFoodButton" Content="Необходимые продукты" HorizontalAlignment="Left" Height="36" Margin="10,79,0,0" VerticalAlignment="Top" Width="280" Click="necessaryFoodButton_Click"/>
+
+    </Grid>
+</Page>

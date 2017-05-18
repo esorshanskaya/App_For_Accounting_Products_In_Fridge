@@ -16,23 +16,17 @@ using System.Windows.Shapes;
 namespace App_For_Accounting_Products_In_Fridge
 {
     /// <summary>
-    /// Interaction logic for foodInFridge.xaml
+    /// Interaction logic for ShoppingListPage.xaml
     /// </summary>
-    public partial class foodInFridge : Page
+    public partial class ShoppingListPage : Page
     {
-        public foodInFridge()
+        public ShoppingListPage()
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void backButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, RoutedEventArgs e)
-        {
-            
+            NavigationService.GoBack();
         }
     }
 }
