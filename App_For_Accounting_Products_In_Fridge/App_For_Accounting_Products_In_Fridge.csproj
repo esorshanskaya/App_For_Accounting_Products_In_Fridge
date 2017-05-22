@@ -55,8 +55,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddAvailableProductsPage.xaml.cs">
+      <DependentUpon>AddAvailableProductsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNecessaryFoodListPage.xaml.cs">
+      <DependentUpon>AddNecessaryFoodListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddShoppingList.xaml.cs">
+      <DependentUpon>AddShoppingList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AvailableProductsListPage.xaml.cs">
+      <DependentUpon>AvailableProductsListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AvailableProductsPage.xaml.cs">
       <DependentUpon>AvailableProductsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpiredFoodPage.xaml.cs">
+      <DependentUpon>ExpiredFoodPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpiringFoodPage.xaml.cs">
+      <DependentUpon>ExpiringFoodPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -77,9 +95,32 @@
     <Compile Include="StartingPage.xaml.cs">
       <DependentUpon>StartingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TradeMark.cs" />
     <Compile Include="TypeOfProduct.cs" />
+    <Page Include="AddAvailableProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNecessaryFoodListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddShoppingList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AvailableProductsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AvailableProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExpiredFoodPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExpiringFoodPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -16,30 +16,28 @@ using System.Windows.Shapes;
 namespace App_For_Accounting_Products_In_Fridge
 {
     /// <summary>
-    /// Interaction logic for NecessaryFoodPage.xaml
+    /// Interaction logic for AvailableProductsListPage.xaml
     /// </summary>
-    public partial class NecessaryFoodPage : Page
+    public partial class AvailableProductsListPage : Page
     {
-        List<Product> _necessaryFoodList = new List<Product>();
-        public NecessaryFoodPage()
-
-        {
-
-
+        List<Product> _availableProductsList = new List<Product>();
+        public AvailableProductsListPage()
+        { 
+      
             InitializeComponent();
-            _necessaryFoodList.Add(new Product("Milk"));
+            _availableProductsList.Add(new Product("Milk"));
             RefreshListBox();
         }
         public void NewProductAdded(Product _newProduct)
         {
-            _necessaryFoodList.Add(_newProduct);
-            NFlistBox.ItemsSource = null;
-            NFlistBox.ItemsSource = _necessaryFoodList;
+            _availableProductsList.Add(_newProduct);
+            listBoxAvailableProducts.ItemsSource = null;
+            listBoxAvailableProducts.ItemsSource = _availableProductsList;
         }
         private void RefreshListBox()
         {
-            NFlistBox.ItemsSource = null;
-            NFlistBox.ItemsSource = _necessaryFoodList;
+            listBoxAvailableProducts.ItemsSource = null;
+            listBoxAvailableProducts.ItemsSource = _availableProductsList;
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
@@ -47,22 +45,22 @@ namespace App_For_Accounting_Products_In_Fridge
         }
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(Pages.AddNecessaryFoodListPage);
+            NavigationService.Navigate(Pages.AddAvailableProductsPage);
         }
         private void buttonRemove_Click(object sender, RoutedEventArgs e)
         {
-            if (NFlistBox.SelectedIndex != -1)
+            if (listBoxAvailableProducts.SelectedIndex != -1)
             {
-                _necessaryFoodList.RemoveAt(NFlistBox.SelectedIndex);
+                _availableProductsList.RemoveAt(listBoxAvailableProducts.SelectedIndex);
                 RefreshListBox();
             }
         }
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
-            if (NFlistBox.SelectedIndex != -1)
+            if (listBoxAvailableProducts.SelectedIndex != -1)
             {
-                NFlistBox.Focus();
-                _necessaryFoodList.Clear();
+                listBoxAvailableProducts.Focus();
+                _availableProductsList.Clear();
                 RefreshListBox();
             }
         }

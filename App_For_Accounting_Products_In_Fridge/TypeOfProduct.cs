@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App_For_Accounting_Products_In_Fridge
 {
-    class TypeOfProduct
+    public class TypeOfProduct
     {
         private string _name;
 

@@ -1,15 +1,15 @@
-﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.NecessaryFoodPage"
+﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.AvailableProductsListPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="NecessaryFoodPage">
+      d:DesignHeight="300"
+      Title="AvailableProductsListPage" Width="554.435">
 
     <Grid Margin="0,0,-170,0">
-        <ListBox x:Name="NFlistBox" HorizontalAlignment="Left" Height="239" Margin="10,10,0,0" VerticalAlignment="Top" Width="194" DisplayMemberPath="Info1"/>
+        <ListBox x:Name="listBoxAvailableProducts" HorizontalAlignment="Left" Height="239" Margin="10,10,0,0" VerticalAlignment="Top" Width="194" DisplayMemberPath="Info2"/>
         <Button x:Name="addProductButton" Content="Добавить продукт в список" HorizontalAlignment="Left" Height="43" Margin="241,25,0,0" VerticalAlignment="Top" Width="149" Click="addButton_Click"/>
         <Button x:Name="deleteProductButton" Content="Удалить продукт из списка" HorizontalAlignment="Left" Height="46" Margin="241,91,0,0" VerticalAlignment="Top" Width="149" Click="buttonRemove_Click"/>
         <Button x:Name="clearButton" Content="Очистить список" HorizontalAlignment="Left" Height="46" Margin="241,156,0,0" VerticalAlignment="Top" Width="149" Click="clearButton_Click"/>
