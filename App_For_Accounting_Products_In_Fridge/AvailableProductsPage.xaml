@@ -7,9 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="900"
       Title="AvailableProductsPage">
-    <Page.Background>
-        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
-    </Page.Background>
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -27,11 +26,48 @@
         </Grid.RowDefinitions>
 
 
-        <Button x:Name="listofProductsButton" Content="Cписок имеющихся в холодильнике продуктов"  Click="listofProductsButton_Click" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16"/>
-        <Button x:Name="expiringProductsButton" Content="Продукты с истекающим сроком годности"  Click="listofExpiringFoodButton_Click" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16"/>
-        <Button x:Name="expiredProductsButton" Content="Продукты с истекшим сроком годности"  Click="listofExpiredFoodButton_Click" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16"/>
-        <Button x:Name="goBackButton" Content="Назад&#xD;&#xA;" Click="backButton_Click"  Grid.Row="4" Margin="10,0,10.333,10" FontWeight="Bold" FontSize="16" />
-        <Button x:Name="longOpenedListButton" Content="Список длительно открытых продуктов" Click="listofLongOpenedProductsButton_Click" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="listofProductsButton" Content="Cписок имеющихся в холодильнике продуктов"  Click="listofProductsButton_Click" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button12.jpg"/>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
 
+        </Button>
+        <Button x:Name="expiringProductsButton" Content="Продукты с истекающим сроком годности"  Click="listofExpiringFoodButton_Click" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button13.jpg"/>
+            </Button.Background>
+
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="expiredProductsButton" Content="Продукты с истекшим сроком годности"  Click="listofExpiredFoodButton_Click" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button14.jpg"/>
+            </Button.Background>
+
+
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="goBackButton" Content="" Click="backButton_Click"  Grid.Row="5" Margin="55,0,48.333,10" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="122" >
+            
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/back.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="longOpenedListButton" Content="Список длительно открытых продуктов" Click="listofLongOpenedProductsButton_Click" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button15.jpg"/>
+            </Button.Background>
+
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>

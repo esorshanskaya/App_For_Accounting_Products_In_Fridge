@@ -8,8 +8,10 @@
       d:DesignHeight="600" d:DesignWidth="900"
       Title="ExpiringFoodPage">
     <Page.Background>
-        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+        <ImageBrush/>
     </Page.Background>
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -26,8 +28,13 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ListBox x:Name="listBoxExpiringFood" DisplayMemberPath="Info3" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-        <Button x:Name="goBackButton" Content="Назад" Click="backButton_Click" Grid.Column="0" Grid.Row="4"/>
+        <ListBox x:Name="listBoxExpiringFood" DisplayMemberPath="Info4" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <Button x:Name="goBackButton" Content="" Click="backButton_Click" Grid.Column="0" Grid.Row="4" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="46,0,87.333,0" Width="92">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/back.png"/>
+            </Button.Background>
+           
+        </Button>
     </Grid>
    
 </Page>

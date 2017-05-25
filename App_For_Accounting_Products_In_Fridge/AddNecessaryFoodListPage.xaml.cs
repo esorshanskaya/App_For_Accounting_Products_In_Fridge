@@ -34,34 +34,40 @@ Product _newProduct;
 }
 private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            double amount;
-            if (string.IsNullOrWhiteSpace(textBoxName.Text))
+            try
             {
 
-                MessageBox.Show("Необходимо ввести название продукта");
-                textBoxName.Focus();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(textBoxTradeMark.Text))
-            {
+                double amount;
+                if (string.IsNullOrWhiteSpace(textBoxName.Text))
+                {
 
-                MessageBox.Show("Необходимо ввести название торговой марки");
-                textBoxName.Focus();
-                return;
+                    MessageBox.Show("Необходимо ввести название продукта");
+                    textBoxName.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(textBoxTradeMark.Text))
+                {
+
+                    MessageBox.Show("Необходимо ввести название торговой марки");
+                    textBoxName.Focus();
+                    return;
+                }
+                if (!double.TryParse(textBoxAmount.Text, out amount))
+                {
+                    MessageBox.Show("Некорректное значение веса");
+                    textBoxAmount.Focus();
+                    return;
+                }
+                _newProduct = new Product(textBoxName.Text, amount, textBoxTradeMark.Text);
+                textBoxName.Text = "";
+                textBoxAmount.Text = "";
+                textBoxTradeMark.Text = "";
+                Pages.NecessaryFoodPage.NewProductAdded(_newProduct);
+               
+                NavigationService.GoBack();
             }
-            if (!double.TryParse(textBoxAmount.Text, out amount))
-            {
-                MessageBox.Show("Некорректное значение веса");
-                textBoxAmount.Focus();
-                return;
-            }
-            _newProduct = new Product(textBoxName.Text, amount, textBoxTradeMark.Text);
-            textBoxName.Text = "";
-            textBoxAmount.Text = "";
-            textBoxTradeMark.Text = "";
-            Pages.NecessaryFoodPage.NewProductAdded(_newProduct);
-            NavigationService.GoBack();
-          
+            catch
+            { MessageBox.Show("Произошла ошибка"); }
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
         {

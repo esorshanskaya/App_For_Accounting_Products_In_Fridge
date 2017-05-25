@@ -25,6 +25,7 @@ namespace App_For_Accounting_Products_In_Fridge
         private static EditingProductPage _editingProductPage = new EditingProductPage();
         private static EditingNecessaryProductPage _editingNecessaryProductPage = new EditingNecessaryProductPage();
         private static EditingProductForPurchasingPage _editingProductForPurchasingPage = new EditingProductForPurchasingPage();
+     
 
 
         public static LoginPage LoginPage
@@ -159,5 +160,6 @@ namespace App_For_Accounting_Products_In_Fridge
             }
 
         }
+        
     }
 }

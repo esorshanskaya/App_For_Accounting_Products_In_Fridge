@@ -20,15 +20,38 @@ namespace App_For_Accounting_Products_In_Fridge
     /// </summary>
     public partial class ExpiredFoodPage : Page
     {
-     List<Product> _expiredProductsList = new List<Product>();
+        static string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        IO availableProductsListFileInput = new IO(path, "availableproductslistfile.txt");
+
+        List<Product> _expiredProductsList = new List<Product>();
    List<Product> _currentExpiredProductsList = new List<Product>();
-     
+        List<Product> _availableProductsList = new List<Product>();
+
         public ExpiredFoodPage()
         {
             InitializeComponent();
-      
+            InputAvailableProductsList();
             RefreshListBox();
         }
+        private void InputAvailableProductsList()
+        {
+            _availableProductsList = availableProductsListFileInput.ReadAvailableProductsList();
+            DateTime thisDay = DateTime.Today;
+
+
+            foreach (Product item in _availableProductsList)
+            {
+
+
+                if (((thisDay.Subtract(item.expirationDate)).Days) > 0)
+                {
+                    _currentExpiredProductsList.Add(item);
+
+                }
+            }
+        }
+    
+
         public void NewProductAdded(Product _newProduct)
         {
             _expiredProductsList.Add(_newProduct);

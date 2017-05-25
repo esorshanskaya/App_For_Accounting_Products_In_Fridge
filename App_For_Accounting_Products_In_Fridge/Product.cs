@@ -23,13 +23,7 @@ namespace App_For_Accounting_Products_In_Fridge
             get { return _amount; }
             set { _amount = value; }
         }
-        private TypeOfProduct _typeOfProduct;
-
-        public TypeOfProduct TypeOfProduct
-        {
-            get { return _typeOfProduct; }
-            set { _typeOfProduct = value; }
-        }
+        
 
         private string _tradeMark;
 
@@ -66,7 +60,7 @@ namespace App_For_Accounting_Products_In_Fridge
         {
             get
             {
-                return $"{_name} - {_tradeMark} - {_typeOfProduct} - {_dateOfProduction} - {_dateOfOpening} - {_expirationDate}";
+                return $"{_name} - {_tradeMark}  - {_dateOfProduction} - {_dateOfOpening} - {_expirationDate}";
             }
         }
 
@@ -105,11 +99,18 @@ namespace App_For_Accounting_Products_In_Fridge
                 return $"{_name} {_tradeMark} {_amount} грамм, дата вскрытия упаковки {(_dateOfOpening.Date).ToString("d")} открыт {Math.Abs((thisDay.Subtract(_dateOfOpening)).Days) } дней назад";
             }
         }
-        public Product(string name,string tradeMark, TypeOfProduct typeOfProduct, DateTime dateOfProduction, DateTime dateOfOpening, DateTime expirationDate)
+        public string Info6
+        {
+            get
+            {
+                return $"{_name} '{_tradeMark}'";
+            }
+        }
+        public Product(string name,string tradeMark, DateTime dateOfProduction, DateTime dateOfOpening, DateTime expirationDate)
         {
             _name = name;
             _tradeMark = tradeMark;
-            _typeOfProduct = typeOfProduct;
+        
             _dateOfProduction =dateOfProduction;
             _dateOfOpening =dateOfOpening;
             _expirationDate = expirationDate;

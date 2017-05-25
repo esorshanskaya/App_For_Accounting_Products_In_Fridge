@@ -20,38 +20,59 @@ namespace App_For_Accounting_Products_In_Fridge
     /// Interaction logic for LoginPage.xaml
     /// </summary>
     public partial class LoginPage : Page
-    {
+    { bool flag;
+        static string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        IO userListFileInput = new IO(path, "userFile.txt");
+
+        List<Users> _usersList = new List<Users>();
         public LoginPage()
         {
             InitializeComponent();
-            // При загрузке страницы передаем фокус первому текстбоксу, чтобы
-            // сразу можно было вводить имя пользователя
+            InputUserList();
             textBoxLogin.Focus();
         }
-
-        private string CalculateHash(string password)
+        private void InputUserList()
         {
-            MD5 md5 = MD5.Create();
-            var hash = md5.ComputeHash(Encoding.ASCII.GetBytes(password));
-            return Convert.ToBase64String(hash);
+            _usersList = userListFileInput.ReadUsersList();
+
+
+
         }
+        public void NewUserAdded(Users _newUser)
+        {
+            _usersList.Add(_newUser);
+
+        }
+        
 
         private void buttonLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            // Хэш зарегистрированного пользователя должен браться из хранилища
-            // данных программы
-            var hash = CalculateHash("12345");
 
-            if (textBoxLogin.Text == "orsh" && CalculateHash(passwordBox.Password) == hash)
-                NavigationService.Navigate(Pages.StartingPage);
-            else
-                MessageBox.Show("Incorrect login/password");
+
+            foreach (Users item in _usersList)
+            {
+
+                if (textBoxLogin.Text.Equals(item.Login) && passwordBox.Text.Equals(item.Password))
+                { flag = true; }
+
+
+
+                else
+                { flag = false; }
+            }
+                if (flag == false)
+                { MessageBox.Show("Неправильный логин или пароль"); }
+            
+            if (flag == true)
+         {
+                Pages.NecessaryFoodPage.Login(textBoxLogin.Text);
+                NavigationService.Navigate(Pages.StartingPage);}
         }
 
         private void Page_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            // Using keyboard handling on the page level
+          
             if (e.Key == Key.Enter)
                 buttonLogin_Click(null, null);
         }

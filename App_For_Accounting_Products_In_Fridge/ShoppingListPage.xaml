@@ -7,9 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="900"
       Title="ShoppingListPage">
-    <Page.Background>
-        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
-    </Page.Background>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -28,12 +26,54 @@
 
         <ListBox x:Name="ShoppinglistBox" DisplayMemberPath="Info1" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
 
-        <Button x:Name="addProductButton" Content="Добавить продукты в список"  Click="addButton_Click" Grid.Column="0" Grid.Row="0"/>
-        <Button x:Name="deleteProductButton" Content="Удалить продукт из списка"  Click="buttonRemove_Click" Grid.Column="4" Grid.Row="1"/>
-        <Button x:Name="clearButton" Content="Очистить список покупок" Click="clearButton_Click" Grid.Column="0" Grid.Row="2"/>
-        <Button x:Name="goBackButton" Content="Назад"  Click="backButton_Click" Grid.Row="4" Margin="9.667,44,0,56" Grid.RowSpan="2" Grid.Column="1" />
-        <Button x:Name="editingButton" Content="Редактировать"  Click="editingButton_Click" Grid.Column="4" Grid.Row="3"/>
+        <Button x:Name="addProductButton" Content="Добавить продукты в список"  Click="addButton_Click" Grid.Column="0" Grid.Row="0" FontSize="14" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button4.jpg"/>
+            </Button.Background>
+
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="deleteProductButton" Content="Удалить продукт из списка"  Click="buttonRemove_Click" Grid.Column="4" Grid.Row="1" FontSize="14" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button5.jpg"/>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+
+        </Button>
+        <Button x:Name="clearButton" Content="Очистить список покупок" Click="clearButton_Click" Grid.Column="0" Grid.Row="2" FontSize="14" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button7.jpg"/>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+
+        </Button>
+        <Button x:Name="goBackButton" Content=""  Click="backButton_Click" Grid.Row="4" Margin="38.333,44,65,56" Grid.RowSpan="2" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="122" Grid.Column="1" >
+           
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/back.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="editingButton" Content="Редактировать"  Click="editingButton_Click" Grid.Column="4" Grid.Row="3" FontWeight="Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button9.jpg"/>
+            </Button.Background>
+
+
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
         <TextBox x:Name="textBoxSearch"  Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2" Margin="20,55,204,0" />
-        <Button x:Name="searchButton" Content="Поиск" Grid.Column="3"  Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="62,0,54.333,0" Width="109" Height="45" Click="buttonSearch_Click"/>
+        <Button x:Name="searchButton" Content="" Grid.Column="4"  Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Width="60" Height="45" Click="buttonSearch_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/search.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

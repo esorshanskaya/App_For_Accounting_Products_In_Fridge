@@ -7,9 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="900"
       Title="StartingPage">
-    <Page.Background>
-        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
-    </Page.Background>
+   
 
 
 
@@ -28,30 +26,32 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button x:Name="ProductsForPurchaseButton"  Content="Создать список покупок" Click="ProductsForPurchaseButton_Click" Grid.Column="1" Grid.Row="0" FontSize="18" FontWeight="Bold" FontFamily="Elephant">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
+        <Button x:Name="ProductsForPurchaseButton"  Content="Создать список покупок" Click="ProductsForPurchaseButton_Click" Grid.Row="0" FontSize="18" FontWeight="Bold" FontFamily="Elephant" Grid.ColumnSpan="2" Margin="225,0,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button1.jpg"/>
+            </Button.Background>
 
-            <Button.Background>
-                <ImageBrush ImageSource="C:\Users\L\Desktop\project\button.jpg" TileMode="Tile"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="AvailableProductsButton"   Content="Имеющиеся в холодильнике продукты"   Click="AvailableProductsButton_Click" Grid.Column="2" Grid.Row="1" FontSize="16" FontWeight="Bold">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
+        </Button>
+        <Button x:Name="AvailableProductsButton"   Content="Имеющиеся в&#xD;&#xA; холодильнике продукты"   Click="AvailableProductsButton_Click" Grid.Column="2" Grid.Row="1" FontSize="16" FontWeight="Bold">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\L\Desktop\project\button.jpg" TileMode="Tile"/>
+                <ImageBrush ImageSource="Resources/button2.jpg"/>
             </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+          
         </Button>
         <Button x:Name="necessaryFoodButton" Content="Необходимые продукты"  Click="necessaryFoodButton_Click" Grid.Column="1" Grid.Row="2" FontSize="16" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/button3.jpg"/>
+            </Button.Background>
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="C:\Users\L\Desktop\project\button.jpg" TileMode="Tile"/>
-            </Button.Background>
+           
         </Button>
 
     </Grid>

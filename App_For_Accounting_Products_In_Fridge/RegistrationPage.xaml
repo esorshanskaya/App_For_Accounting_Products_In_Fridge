@@ -5,19 +5,43 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="RegistrationPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-    <Grid Margin="0,0,-217,0">
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="27" Margin="29,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" TextChanged="LoginTextBox_TextChanged"/>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="29,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="30" Margin="29,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="RepeatingPasswordTextBox" HorizontalAlignment="Left" Height="30" Margin="29,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="loginLabel" Content="Введите логин пользователя" HorizontalAlignment="Left" Height="27" Margin="29,10,0,0" VerticalAlignment="Top" Width="174"/>
-        <Label x:Name="nameLabel" Content="Введите имя пользователя" HorizontalAlignment="Left" Height="28" Margin="29,64,0,0" VerticalAlignment="Top" Width="174"/>
-        <Label x:Name="passwordLabel" Content="Введите пароль" HorizontalAlignment="Left" Height="22" Margin="29,115,0,0" VerticalAlignment="Top" Width="174"/>
-        <Label x:Name="repeatingLabel" Content="Повторите пароль" HorizontalAlignment="Left" Height="32" Margin="29,167,0,0" VerticalAlignment="Top" Width="174"/>
-        <Button x:Name="registrationButton" Content="Зарегистрироваться" HorizontalAlignment="Left" Height="51" Margin="255,103,0,0" VerticalAlignment="Top" Width="167"/>
-        <Button x:Name="goBackButton" Content="Назад" HorizontalAlignment="Left" Height="44" Margin="29,246,0,0" VerticalAlignment="Top" Width="120" Click="backButton_Click"/>
+        <TextBox x:Name="LoginTextBox"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="1" TextChanged="LoginTextBox_TextChanged" Height="37" Margin="225,41,0.333,22"/>
+
+        <TextBox x:Name="PasswordTextBox"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="2" Height="49" Margin="225,74,224,0" />
+        <TextBox x:Name="RepeatingPasswordTextBox" TextWrapping="Wrap" Grid.ColumnSpan="4" Grid.Row="3" Grid.RowSpan="1" Text="" VerticalAlignment="Top" Height="53" Margin="225,0,224,0"/>
+
+
+        <Button x:Name="registrationButton" Content="" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="4" Grid.RowSpan="1"  Click="registrationButton_Click" Margin="53,0,81.333,10" RenderTransformOrigin="0.5,0.5" Width="91">
+
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/done.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="goBackButton" Content="" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="4" Grid.RowSpan="1" Click="backButton_Click" HorizontalAlignment="Center" Margin="48.667,0,70,0" Width="106">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/back.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="labelLogin" Content="Введите логин пользователя" HorizontalAlignment="Left" Height="37" Margin="10,41,0,0" VerticalAlignment="Top" Width="205" FontWeight="Bold"/>
+        <Label x:Name="labelPassword" Content="Введите пароль" HorizontalAlignment="Left" Height="26" Margin="0,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="225" FontWeight="Bold"/>
+        <Label x:Name="labelRepeat" Content="Повторите пароль" HorizontalAlignment="Left" Height="53" Grid.Row="3" VerticalAlignment="Top" Width="225" FontWeight="Bold"/>
     </Grid>
 </Page>

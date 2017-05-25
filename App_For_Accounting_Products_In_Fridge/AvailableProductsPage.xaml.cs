@@ -45,5 +45,7 @@ namespace App_For_Accounting_Products_In_Fridge
         {
             NavigationService.GoBack();
         }
+
+       
     }
 }

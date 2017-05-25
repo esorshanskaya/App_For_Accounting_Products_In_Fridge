@@ -45,37 +45,39 @@ namespace App_For_Accounting_Products_In_Fridge
             }
         }
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
-        {
-            double amount;
-            if (string.IsNullOrWhiteSpace(textBoxName.Text))
+        {try
             {
+                double amount;
+                if (string.IsNullOrWhiteSpace(textBoxName.Text))
+                {
 
-                MessageBox.Show("Необходимо ввести название продукта");
-                textBoxName.Focus();
-                return;
+                    MessageBox.Show("Необходимо ввести название продукта");
+                    textBoxName.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(textBoxTradeMark.Text))
+                {
+
+                    MessageBox.Show("Необходимо ввести название торговой марки");
+                    textBoxName.Focus();
+                    return;
+                }
+                if (!double.TryParse(textBoxAmount.Text, out amount))
+                {
+                    MessageBox.Show("Некорректное значение веса");
+                    textBoxAmount.Focus();
+                    return;
+                }
+                _newProduct = new Product(textBoxName.Text, amount, textBoxTradeMark.Text);
+                textBoxName.Text = "";
+                textBoxAmount.Text = "";
+                textBoxTradeMark.Text = "";
+
+                Pages.ShoppingListPage.NewProductAdded(_newProduct);
+                NavigationService.GoBack();
             }
-            if (string.IsNullOrWhiteSpace(textBoxTradeMark.Text))
-            {
+            catch { MessageBox.Show("Произошла ошибка"); }
 
-                MessageBox.Show("Необходимо ввести название торговой марки");
-                textBoxName.Focus();
-                return;
-            }
-            if (!double.TryParse(textBoxAmount.Text, out amount))
-            {
-                MessageBox.Show("Некорректное значение веса");
-                textBoxAmount.Focus();
-                return;
-            }
-            _newProduct = new Product(textBoxName.Text, amount, textBoxTradeMark.Text);
-            textBoxName.Text = "";
-            textBoxAmount.Text = "";
-            textBoxTradeMark.Text = "";
-
-            Pages.ShoppingListPage.NewProductAdded(_newProduct);
-            NavigationService.GoBack();
-
-           
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
         {

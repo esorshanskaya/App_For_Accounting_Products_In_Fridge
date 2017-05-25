@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -108,7 +109,7 @@
     <Compile Include="StartingPage.xaml.cs">
       <DependentUpon>StartingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TypeOfProduct.cs" />
+    <Compile Include="Users.cs" />
     <Page Include="AddAvailableProductsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -217,6 +218,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\fridge1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\button15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_6-5122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\done.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

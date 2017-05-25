@@ -22,68 +22,34 @@ namespace App_For_Accounting_Products_In_Fridge
     public partial class StartingPage : Page
     {
         List<Product> ShoppingList = new List<Product>();
-        //    //IO shoppingListFileInput = new IO(@"C:\Users\L\Desktop\proverka\", "shoppinglistfile.txt");
-        //    List<Product> NecessaryProductsList = new List<Product>();
-        //    IO necessaryProductsListFileInput = new IO(@"C:\Users\L\Desktop\proverka\", "necessaryproductslistfile.txt");
-        //    List<Product> AvailableProductsList = new List<Product>();
-        //    IO availableProductsListFileInput = new IO(@"C:\Users\L\Desktop\proverka\", "availableproductslistfile.txt");
+
 
         public StartingPage()
         {
             InitializeComponent();
-            //InputShoppingList();
-            //InputNecessaryProductsList();
-            //InputAvailableProductsList();
-
-          
-        }
-        //private void InputShoppingList()
-        //    {
-        //    ShoppingList = shoppingListFileInput.ReadShoppingListAndNecessaryProductsList();
-        //    foreach (Product item in ShoppingList)
-        //    {
-        //        Pages.ShoppingListPage.NewProductAdded(item);
-        //    }
-
-            
-        //}
-        //private void InputNecessaryProductsList()
-        //{
-        //    NecessaryProductsList = availableProductsListFileInput.ReadAvailableProductsList();
-        //    foreach (Product item in NecessaryProductsList)
-        //    {
-        //        Pages.NecessaryFoodPage.NewProductAdded(item);
-        //    }
-            
-        //}
-        //private void InputAvailableProductsList()
-        //{
-        //    AvailableProductsList = necessaryProductsListFileInput.ReadShoppingListAndNecessaryProductsList();
-        //    foreach (Product item in AvailableProductsList)
-        //    {
-        //        Pages.AvailableProductsListPage.NewProductAdded(item);
-        //    }
-        //    return;
-
-        //}
+            }
+         
         private void AvailableProductsButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(Pages.AvailableProductsPage);
+        {try
+            {
+                NavigationService.Navigate(Pages.AvailableProductsPage);
+            }
+            catch { MessageBox.Show("Error"); }
         }
         private void ProductsForPurchaseButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(Pages.ShoppingListPage);
+        {try
+            {
+                NavigationService.Navigate(Pages.ShoppingListPage);
+            }
+            catch { MessageBox.Show("Error"); }
         }
         private void necessaryFoodButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(Pages.NecessaryFoodPage);
+        {try
+            {
+                NavigationService.Navigate(Pages.NecessaryFoodPage);
+            }
+            catch { MessageBox.Show ("Error"); }
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //InputAvailableProductsList();
-            //InputNecessaryProductsList();
-            //InputAvailableProductsList();
-
-        }
+        
     }
 }

@@ -7,9 +7,8 @@
       mc:Ignorable="d"
          d:DesignHeight="600" d:DesignWidth="900"
       Title="AddAvailableProductsPage">
-    <Page.Background>
-        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
-    </Page.Background>
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -32,7 +31,13 @@
         <TextBox x:Name="textBoxName"  TextWrapping="Wrap" Text="" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,23,0.333,0"/>
         <Label x:Name="label1" Content="Введите Марку" HorizontalAlignment="Right"  VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="label2" Content="Введите вес продукта" Grid.Row="2" Grid.Column="0" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0.333,34" />
-        <Button x:Name="addButton" Content="Добавить"  Click="buttonAdd_Click"  Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" Margin="36.667,0,25,0" Width="163"/>
+        <Button x:Name="addButton" Content=""  Click="buttonAdd_Click"  Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center"  Width="111" FontWeight="Bold" FontSize="18">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/icon.png"/>
+            </Button.Background>
+
+
+        </Button>
         <TextBox x:Name="textBoxTradeMark" TextWrapping="Wrap" Text="" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,10,0.333,10"/>
         <TextBox x:Name="textBoxAmount"  TextWrapping="Wrap" Text="" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,0,0.333,24"/>
         <TextBox x:Name="textBoxDateOfProduction"  TextWrapping="Wrap" Text="" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,0,0.333,31" />
@@ -41,6 +46,12 @@
         <Label x:Name="label3" Content="Введите дату производства" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="16" />
         <Label x:Name="label4" Content="Введите дату вскрытия&#xD;&#xA; упаковки"  Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="label5" Content="Введите дату истечения&#xD;&#xA;срока годности"  Grid.Row="5" Grid.Column="0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <Button x:Name="goBackButton" Content="Назад"  Click="backButton_Click" Grid.Row="2"  Grid.Column="4" Margin="36.667,0,25,0" Width="163"/>
+        <Button x:Name="goBackButton" Content=""  Click="backButton_Click" Grid.Row="2"  Grid.Column="3" Margin="56.667,0,57,0" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Width="111">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/back.png"/>
+            </Button.Background>
+
+
+        </Button>
     </Grid>
 </Page>

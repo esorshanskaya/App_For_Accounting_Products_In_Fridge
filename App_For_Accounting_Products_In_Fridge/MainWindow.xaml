@@ -7,10 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="900">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+        <ImageBrush ImageSource="/Resources/fridge1.jpg"/>
     </Window.Background>
 
+
+
     <Grid>
-        <Frame Name="frameMain" NavigationUIVisibility="Hidden" Margin="0,0,-6.667,-0.333"/>
+        <Frame Name="frameMain" NavigationUIVisibility="Hidden" Margin="0,0,-6.667,-0.333">
+            <Frame.Background>
+                <ImageBrush ImageSource="Resources/fridge1.jpg"/>
+            </Frame.Background>
+        </Frame>
     </Grid>
 </Window>

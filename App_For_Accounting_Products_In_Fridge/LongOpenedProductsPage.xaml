@@ -7,9 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="900"
       Title="LongOpenedProductsPage">
-    <Page.Background>
-        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
-    </Page.Background>
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -26,9 +25,13 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ListBox x:Name="listBoxLongOpenedProducts" DisplayMemberPath="Info3" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-        <Button x:Name="goBackButton" Content="Назад" Click="backButton_Click" Grid.Column="0" Grid.Row="4"/>
+        <ListBox x:Name="listBoxLongOpenedProducts" DisplayMemberPath="Info5" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <Button x:Name="goBackButton" Content="" Click="backButton_Click" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" Margin="47,0,61.333,0" Width="117">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/back.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 
-   
+
 </Page>
