@@ -43,7 +43,10 @@ namespace App_For_Accounting_Products_In_Fridge
             _usersList.Add(_newUser);
 
         }
-        
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
 
         private void buttonLogin_Click(object sender, RoutedEventArgs e)
         {

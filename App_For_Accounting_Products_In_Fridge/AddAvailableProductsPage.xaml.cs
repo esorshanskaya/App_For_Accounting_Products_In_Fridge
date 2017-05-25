@@ -73,13 +73,13 @@ namespace App_For_Accounting_Products_In_Fridge
                 DateTime dateofProduction = new DateTime((int.Parse(datearray[2])), (int.Parse(datearray[1])), (int.Parse(datearray[0])));
                 if (((thisDay.Subtract(dateofProduction).Days) < 0))
                 {
-                    MessageBox.Show("Некорректная дата.");
+                    MessageBox.Show("Некорректная дата.Дата не может превышать текущий день.");
                     textBoxDateOfProduction.Focus();
                     return;
                 }
                 if (!DateTime.TryParse(textBoxDateOfOpening.Text, out dateOfOpening))
                 {
-                    MessageBox.Show("Некорректная дата");
+                    MessageBox.Show("Некорректная дата.Дата не может превышать текущий день.");
                     textBoxAmount.Focus();
                     return;
                 }

@@ -33,6 +33,11 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <Button x:Name="goBackButton" Content="" Grid.ColumnSpan="1" Grid.Row="4" Click="backButton_Click" HorizontalAlignment="Center" Margin="34,0,85.333,0" Width="106">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/back.png"/>
+            </Button.Background>
+        </Button>
         <Label x:Name="labelLogin" Content="Введите логин" HorizontalAlignment="Left" Height="43" Margin="10,57,0,0" VerticalAlignment="Top" Width="210" FontSize="14" FontWeight="Bold"/>
         <Label x:Name="labelPassword" Grid.ColumnSpan="2" Content="Введите пароль" HorizontalAlignment="Left" Height="45" Margin="10,55,0,0" Grid.Row="2" VerticalAlignment="Top" Width="220" FontSize="14" FontWeight="Bold"/>
 
