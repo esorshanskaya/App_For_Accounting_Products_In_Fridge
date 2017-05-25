@@ -36,6 +36,11 @@ namespace App_For_Accounting_Products_In_Fridge
         {
             NavigationService.Navigate(Pages.ExpiredFoodPage);
         }
+        private void listofLongOpenedProductsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(Pages.LongOpenedProductsPage);
+        }
+       
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();

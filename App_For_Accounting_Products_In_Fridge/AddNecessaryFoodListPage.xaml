@@ -5,17 +5,35 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="AddNecessaryFoodListPage">
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+    </Page.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-    <Grid Margin="0,0,-206,0">
-        <Label x:Name="label" Content="Название продукта" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" VerticalAlignment="Top" Width="134"/>
-        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="38" Margin="166,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195"/>
-        <Label x:Name="label1" Content="Марка" HorizontalAlignment="Left" Height="41" Margin="10,70,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label x:Name="label2" Content="Вес" HorizontalAlignment="Left" Height="35" Margin="10,132,0,0" VerticalAlignment="Top" Width="134"/>
-        <Button x:Name="addButton" Content="Добавить" HorizontalAlignment="Left" Height="52" Margin="10,238,0,0" VerticalAlignment="Top" Width="177" Click="buttonAdd_Click"/>
-        <TextBox x:Name="textBoxTradeMark" HorizontalAlignment="Left" Height="41" Margin="166,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195"/>
-        <TextBox x:Name="textBoxAmount" HorizontalAlignment="Left" Height="35" Margin="166,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195"/>
 
+        <Label x:Name="label" Content="Введите название продукта" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxName"  TextWrapping="Wrap" Text="" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,10,0.333,10"/>
+        <Label x:Name="label1" Content="Введите торговую марку" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" />
+        <Label x:Name="label2" Content="Введите вес продукта" Grid.Column="0" Grid.Row="2" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Button x:Name="addButton" Content="Добавить"  Click="buttonAdd_Click" Grid.Column="1" Grid.Row="4"/>
+        <TextBox x:Name="textBoxTradeMark"  TextWrapping="Wrap" Text="" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,10,0.333,10"/>
+        <TextBox x:Name="textBoxAmount"  TextWrapping="Wrap" Text="" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,10,0.333,10" />
+        <Button x:Name="goBackButton" Content="Назад"  Click="backButton_Click" Grid.Row="4"  Grid.Column="2" Margin="10,0,0.333,0"/>
     </Grid>
 </Page>

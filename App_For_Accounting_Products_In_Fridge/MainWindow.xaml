@@ -5,14 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
         mc:Ignorable="d"
-        Title="MainWindow" Height="506.075" Width="643.226">
+        Title="MainWindow" Height="600" Width="900">
     <Window.Background>
         <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
     </Window.Background>
 
     <Grid>
-        <Frame Name="frameMain" NavigationUIVisibility="Hidden">
-
-        </Frame>
+        <Frame Name="frameMain" NavigationUIVisibility="Hidden" Margin="0,0,-6.667,-0.333"/>
     </Grid>
 </Window>

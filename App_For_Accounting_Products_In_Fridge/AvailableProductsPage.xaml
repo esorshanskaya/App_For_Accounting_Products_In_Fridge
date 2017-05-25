@@ -5,14 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="AvailableProductsPage">
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+    </Page.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-    <Grid Margin="0,0,-179,-36">
-        <Button x:Name="listofProductsButton" Content="Посмотреть список имеющихся в холодильнике продуктов" HorizontalAlignment="Left" Height="55" Margin="27,26,0,0" VerticalAlignment="Top" Width="395" Click="listofProductsButton_Click"/>
-        <Button x:Name="expiringProductsButton" Content="Продукты с истекающим сроком годности" HorizontalAlignment="Left" Height="59" Margin="27,99,0,0" VerticalAlignment="Top" Width="395" Click="listofExpiringFoodButton_Click"/>
-        <Button x:Name="expiredProductsButton" Content="Продукты с истекшим сроком годности" HorizontalAlignment="Left" Height="51" Margin="27,175,0,0" VerticalAlignment="Top" Width="395" Click="listofExpiredFoodButton_Click"/>
-        <Button x:Name="goBackButton" Content="Назад" HorizontalAlignment="Left" Height="44" Margin="10,282,0,0" VerticalAlignment="Top" Width="120" Click="backButton_Click"/>
+
+        <Button x:Name="listofProductsButton" Content="Cписок имеющихся в холодильнике продуктов"  Click="listofProductsButton_Click" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="expiringProductsButton" Content="Продукты с истекающим сроком годности"  Click="listofExpiringFoodButton_Click" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="expiredProductsButton" Content="Продукты с истекшим сроком годности"  Click="listofExpiredFoodButton_Click" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="goBackButton" Content="Назад&#xD;&#xA;" Click="backButton_Click"  Grid.Row="4" Margin="10,0,10.333,10" FontWeight="Bold" FontSize="16" />
+        <Button x:Name="longOpenedListButton" Content="Список длительно открытых продуктов" Click="listofLongOpenedProductsButton_Click" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="1" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </Page>

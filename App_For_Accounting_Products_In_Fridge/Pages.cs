@@ -18,10 +18,13 @@ namespace App_For_Accounting_Products_In_Fridge
         private static ShoppingListPage _shoppingListPage = new ShoppingListPage();
         private static ExpiringFoodPage _expiringFoodPage = new ExpiringFoodPage();
         private static ExpiredFoodPage _expiredFoodPage = new ExpiredFoodPage();
+        private static LongOpenedProductsPage _longOpenedProductsPage = new LongOpenedProductsPage();
         private static AddShoppingList _addShoppingList = new AddShoppingList();
         private static AddNecessaryFoodListPage _addNecessaryFoodListPage = new AddNecessaryFoodListPage();
         private static AddAvailableProductsPage _addAvailableProductsPage = new AddAvailableProductsPage();
-
+        private static EditingProductPage _editingProductPage = new EditingProductPage();
+        private static EditingNecessaryProductPage _editingNecessaryProductPage = new EditingNecessaryProductPage();
+        private static EditingProductForPurchasingPage _editingProductForPurchasingPage = new EditingProductForPurchasingPage();
 
 
         public static LoginPage LoginPage
@@ -91,6 +94,14 @@ namespace App_For_Accounting_Products_In_Fridge
             }
 
         }
+        public static LongOpenedProductsPage LongOpenedProductsPage
+        {
+            get
+            {
+                return _longOpenedProductsPage;
+            }
+
+        }
 
         public static AvailableProductsListPage AvailableProductsListPage
         {
@@ -121,6 +132,30 @@ namespace App_For_Accounting_Products_In_Fridge
             get
             {
                 return _addAvailableProductsPage;
+            }
+
+        }
+        public static EditingProductPage EditingProductPage
+        {
+            get
+            {
+                return _editingProductPage;
+            }
+
+        }
+        public static EditingNecessaryProductPage EditingNecessaryProductPage
+        {
+            get
+            {
+                return _editingNecessaryProductPage;
+            }
+
+        }
+        public static EditingProductForPurchasingPage EditingProductForPurchasingPage
+        {
+            get
+            {
+                return _editingProductForPurchasingPage;
             }
 
         }

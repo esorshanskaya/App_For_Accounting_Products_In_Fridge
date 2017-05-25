@@ -16,15 +16,33 @@ using System.Windows.Shapes;
 namespace App_For_Accounting_Products_In_Fridge
 {
     /// <summary>
-    /// Interaction logic for AddAvailableProductsPage.xaml
+    /// Interaction logic for EditingProductPage.xaml
     /// </summary>
-    public partial class AddAvailableProductsPage : Page
+    public partial class EditingProductPage : Page
     {
-        public AddAvailableProductsPage()
+        List<Product> _availableProductsList = new List<Product>();
+        Product oldProduct;
+        public EditingProductPage()
         {
+
+   
+
             InitializeComponent();
+
         }
+
         Product _newProduct;
+        public void NewProductAdded(Product _newProduct)
+        {
+            _availableProductsList.Add(_newProduct);
+            oldProduct=new Product(_newProduct.Name, _newProduct.Amount, _newProduct.TradeMark, _newProduct.DateOfProduction, _newProduct.DateOfOpening, _newProduct.expirationDate);
+            textBoxName.Text = _newProduct.Name;
+            textBoxAmount.Text = _newProduct.Amount.ToString();
+            textBoxTradeMark.Text = _newProduct.TradeMark;
+            textBoxExpirationDate.Text = (_newProduct.expirationDate).ToString("d");
+            textBoxDateOfProduction.Text = (_newProduct.DateOfProduction).ToString("d");
+            textBoxDateOfOpening.Text = (_newProduct.DateOfOpening).ToString("d");
+        }
         public Product NewProduct
         {
             get
@@ -32,9 +50,10 @@ namespace App_For_Accounting_Products_In_Fridge
                 return _newProduct;
             }
         }
-    
-        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+
+        private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
+            
             DateTime thisDay = DateTime.Today;
             double amount;
             DateTime dateOfProduction;
@@ -66,11 +85,11 @@ namespace App_For_Accounting_Products_In_Fridge
                 textBoxDateOfProduction.Focus();
                 return;
             }
-            
-            string[] datearray=(textBoxDateOfProduction.Text).Split('.');
+
+            string[] datearray = (textBoxDateOfProduction.Text).Split('.');
             DateTime dateofProduction = new DateTime((int.Parse(datearray[2])), (int.Parse(datearray[1])), (int.Parse(datearray[0])));
             if (((thisDay.Subtract(dateofProduction).Days) < 0))
-                {
+            {
                 MessageBox.Show("Некорректная дата.");
                 textBoxDateOfProduction.Focus();
                 return;
@@ -82,9 +101,9 @@ namespace App_For_Accounting_Products_In_Fridge
                 return;
             }
             string[] dateOfOpeningarray = (textBoxDateOfOpening.Text).Split('.');
-            DateTime dateofOpening=new DateTime((int.Parse(dateOfOpeningarray[2])),(int.Parse(dateOfOpeningarray[1])),(int.Parse(dateOfOpeningarray[0])));
+            DateTime dateofOpening = new DateTime((int.Parse(dateOfOpeningarray[2])), (int.Parse(dateOfOpeningarray[1])), (int.Parse(dateOfOpeningarray[0])));
             if (((thisDay.Subtract(dateofOpening).Days) < 0))
-                {
+            {
                 MessageBox.Show("Некорректная дата.");
                 textBoxDateOfProduction.Focus();
                 return;
@@ -98,8 +117,8 @@ namespace App_For_Accounting_Products_In_Fridge
             string[] expirationDatearray = (textBoxExpirationDate.Text).Split('.');
 
             DateTime expirationDate = new DateTime((int.Parse(expirationDatearray[2])), (int.Parse(expirationDatearray[1])), (int.Parse(expirationDatearray[0])));
-            
-            _newProduct = new Product(textBoxName.Text,amount,textBoxTradeMark.Text,dateofProduction,dateofOpening,expirationDate);
+
+            _newProduct = new Product(textBoxName.Text, amount, textBoxTradeMark.Text, dateofProduction, dateofOpening, expirationDate);
             textBoxName.Text = "";
             textBoxAmount.Text = "";
             textBoxTradeMark.Text = "";
@@ -110,12 +129,18 @@ namespace App_For_Accounting_Products_In_Fridge
             Pages.ExpiringFoodPage.NewProductAdded(_newProduct);
             Pages.ExpiredFoodPage.NewProductAdded(_newProduct);
             Pages.LongOpenedProductsPage.NewProductAdded(_newProduct);
+    
             NavigationService.GoBack();
-         
+
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
+            Pages.AvailableProductsListPage.NewProductAdded(oldProduct);
+            Pages.ExpiringFoodPage.NewProductAdded(oldProduct);
+            Pages.ExpiredFoodPage.NewProductAdded(oldProduct);
+            Pages.LongOpenedProductsPage.NewProductAdded(oldProduct);
             NavigationService.GoBack();
         }
     }
 }
+

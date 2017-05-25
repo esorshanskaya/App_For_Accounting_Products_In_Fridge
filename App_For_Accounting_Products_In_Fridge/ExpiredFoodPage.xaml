@@ -5,11 +5,28 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="ExpiredFoodPage">
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+    </Page.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-    <Grid Margin="0,0,-103,-153">
-        <ListBox x:Name="listBoxExpiredFood" HorizontalAlignment="Left" Height="283" Margin="10,75,0,0" VerticalAlignment="Top" Width="290" DisplayMemberPath="Info3"/>
-        <Button x:Name="goBackButton" Content="Назад" HorizontalAlignment="Left" Height="34" Margin="31,380,0,0" VerticalAlignment="Top" Width="110" Click="backButton_Click"/>
-    </Grid>
+        <ListBox x:Name="listBoxExpiredFood" DisplayMemberPath="Info3" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <Button x:Name="goBackButton" Content="Назад" Click="backButton_Click" Grid.Column="0" Grid.Row="4"/>
+        </Grid> 
 </Page>

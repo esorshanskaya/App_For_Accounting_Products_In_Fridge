@@ -5,14 +5,38 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
-      d:DesignHeight="300"
-      Title="AvailableProductsListPage" Width="554.435">
+       d:DesignHeight="600" d:DesignWidth="900"
+      Title="AvailableProductsListPage">
 
-    <Grid Margin="0,0,-170,0">
-        <ListBox x:Name="listBoxAvailableProducts" HorizontalAlignment="Left" Height="239" Margin="10,10,0,0" VerticalAlignment="Top" Width="194" DisplayMemberPath="Info2"/>
-        <Button x:Name="addProductButton" Content="Добавить продукт в список" HorizontalAlignment="Left" Height="43" Margin="241,25,0,0" VerticalAlignment="Top" Width="149" Click="addButton_Click"/>
-        <Button x:Name="deleteProductButton" Content="Удалить продукт из списка" HorizontalAlignment="Left" Height="46" Margin="241,91,0,0" VerticalAlignment="Top" Width="149" Click="buttonRemove_Click"/>
-        <Button x:Name="clearButton" Content="Очистить список" HorizontalAlignment="Left" Height="46" Margin="241,156,0,0" VerticalAlignment="Top" Width="149" Click="clearButton_Click"/>
-        <Button x:Name="goBackButton" Content="Назад" HorizontalAlignment="Left" Height="44" Margin="241,246,0,0" VerticalAlignment="Top" Width="120" Click="backButton_Click"/>
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+    </Page.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <ListBox x:Name="listBoxAvailableProducts" DisplayMemberPath="Info2" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+
+        <Button x:Name="addProductButton" Content="Добавить продукты в список"  Click="addButton_Click" Grid.Column="0" Grid.Row="0"/>
+        <Button x:Name="deleteProductButton" Content="Удалить продукт из списка"  Click="buttonRemove_Click" Grid.Column="4" Grid.Row="1"/>
+        <Button x:Name="clearButton" Content="Очистить список покупок" Click="clearButton_Click" Grid.Column="0" Grid.Row="2"/>
+        <Button x:Name="goBackButton" Content="Назад"  Click="backButton_Click" Grid.Row="5"  Grid.Column="0" />
+        <Button x:Name="editingButton" Content="Редактировать"  Click="editingButton_Click" Grid.Column="4" Grid.Row="3"/>
+        <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="45" Margin="225,55,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="215" Grid.ColumnSpan="2"/>
+        <Button x:Name="searchButton" Content="Поиск" Grid.Column="2"  Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="62,0,54.333,0" Width="109" Height="45" Click="buttonSearch_Click"/>
     </Grid>
 </Page>

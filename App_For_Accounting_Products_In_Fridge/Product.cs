@@ -74,14 +74,14 @@ namespace App_For_Accounting_Products_In_Fridge
         {
             get
             {
-                return $"{_name} {_tradeMark} {_amount} грамм";
+                return $"{_name} '{_tradeMark}' {_amount} грамм";
             }
         }
         public string Info2
         {
             get
             {
-                return $"{_name} {_tradeMark} {_amount} грамм {(_dateOfProduction.Date).ToString("d")} {(_dateOfOpening.Date).ToString("d")} {(_expirationDate.Date).ToString("d")}";
+                return $"{_name} {_tradeMark} {_amount} грамм, дата производства: {(_dateOfProduction.Date).ToString("d")}, дата вскрытия упаковки: {(_dateOfOpening.Date).ToString("d")}, годен до: {(_expirationDate.Date).ToString("d")}";
             }
         }
         public string Info3
@@ -95,7 +95,14 @@ namespace App_For_Accounting_Products_In_Fridge
         {
             get
             {
-                return $"{_name} {_tradeMark} {_amount} грамм, срок годности {(_expirationDate.Date).ToString("d")} истекает через {Math.Abs((thisDay.Subtract(_expirationDate)).Days)}";
+                return $"{_name} {_tradeMark} {_amount} грамм, срок годности {(_expirationDate.Date).ToString("d")} истекает через {Math.Abs((thisDay.Subtract(_expirationDate)).Days)} дней";
+            }
+        }
+        public string Info5
+        {
+            get
+            {
+                return $"{_name} {_tradeMark} {_amount} грамм, дата вскрытия упаковки {(_dateOfOpening.Date).ToString("d")} открыт {Math.Abs((thisDay.Subtract(_dateOfOpening)).Days) } дней назад";
             }
         }
         public Product(string name,string tradeMark, TypeOfProduct typeOfProduct, DateTime dateOfProduction, DateTime dateOfOpening, DateTime expirationDate)

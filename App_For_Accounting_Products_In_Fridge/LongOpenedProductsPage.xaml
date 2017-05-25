@@ -1,4 +1,4 @@
-﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.ExpiringFoodPage"
+﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.LongOpenedProductsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="900"
-      Title="ExpiringFoodPage">
+      Title="LongOpenedProductsPage">
     <Page.Background>
         <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
     </Page.Background>
@@ -26,8 +26,9 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ListBox x:Name="listBoxExpiringFood" DisplayMemberPath="Info3" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <ListBox x:Name="listBoxLongOpenedProducts" DisplayMemberPath="Info3" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
         <Button x:Name="goBackButton" Content="Назад" Click="backButton_Click" Grid.Column="0" Grid.Row="4"/>
     </Grid>
+
    
 </Page>

@@ -5,13 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="StartingPage">
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
+    </Page.Background>
+
+
 
     <Grid>
-        <Button x:Name="ProductsForPurchaseButton" Content="Создать список покупок" HorizontalAlignment="Left" Height="35" Margin="10,0,0,0" VerticalAlignment="Top" Width="280" Click="ProductsForPurchaseButton_Click"/>
-        <Button x:Name="AvailableProductsButton" Content="Имеющиеся в холодильнике продукты" HorizontalAlignment="Left" Height="34" Margin="10,40,0,0" VerticalAlignment="Top" Width="280"  Click="AvailableProductsButton_Click"/>
-        <Button x:Name="necessaryFoodButton" Content="Необходимые продукты" HorizontalAlignment="Left" Height="36" Margin="10,79,0,0" VerticalAlignment="Top" Width="280" Click="necessaryFoodButton_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button x:Name="ProductsForPurchaseButton"  Content="Создать список покупок" Click="ProductsForPurchaseButton_Click" Grid.Column="1" Grid.Row="0" FontSize="18" FontWeight="Bold" FontFamily="Elephant">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\L\Desktop\project\button.jpg" TileMode="Tile"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="AvailableProductsButton"   Content="Имеющиеся в холодильнике продукты"   Click="AvailableProductsButton_Click" Grid.Column="2" Grid.Row="1" FontSize="16" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\L\Desktop\project\button.jpg" TileMode="Tile"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="necessaryFoodButton" Content="Необходимые продукты"  Click="necessaryFoodButton_Click" Grid.Column="1" Grid.Row="2" FontSize="16" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\L\Desktop\project\button.jpg" TileMode="Tile"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>

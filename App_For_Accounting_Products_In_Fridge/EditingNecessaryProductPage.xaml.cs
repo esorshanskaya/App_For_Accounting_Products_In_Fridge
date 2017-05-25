@@ -16,28 +16,33 @@ using System.Windows.Shapes;
 namespace App_For_Accounting_Products_In_Fridge
 {
     /// <summary>
-    /// Interaction logic for AddShoppingList.xaml
+    /// Interaction logic for EditingNecessaryProductPage.xaml
     /// </summary>
-    public partial class AddShoppingList : Page
+    public partial class EditingNecessaryProductPage : Page
     {
-        IO shoppingListFileOutput = new IO(@"C:\Users\L\Desktop\proverka\", "shoppinglistFile.txt");
-        List<Product> _sL = new List<Product>();
-        public AddShoppingList()
+        Product _newProduct;
+        List<Product> _necessaryProductsList = new List<Product>();
+        Product oldProduct;
+        public EditingNecessaryProductPage()
         {
             InitializeComponent();
         }
-        Product _newProduct;
+        public void NewProductAdded(Product _newProduct)
+        {
+            _necessaryProductsList.Add(_newProduct);
+            oldProduct = new Product(_newProduct.Name, _newProduct.Amount, _newProduct.TradeMark);
+
+            textBoxName.Text = _newProduct.Name;
+            textBoxAmount.Text = _newProduct.Amount.ToString();
+            textBoxTradeMark.Text = _newProduct.TradeMark;
+  
+        }
         public Product NewProduct
         {
             get
             {
                 return _newProduct;
             }
-        }
-        public void OutputShoppingList()
-        {
-            shoppingListFileOutput.WriteShoppingListAndNecessaryProductsList(_sL);
-
         }
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -66,15 +71,14 @@ namespace App_For_Accounting_Products_In_Fridge
             textBoxName.Text = "";
             textBoxAmount.Text = "";
             textBoxTradeMark.Text = "";
-            _sL.Add(_newProduct);
-            //OutputShoppingList();
-            Pages.ShoppingListPage.NewProductAdded(_newProduct);
+            Pages.NecessaryFoodPage.NewProductAdded(_newProduct);
             NavigationService.GoBack();
-
-           
+        
         }
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
+            Pages.NecessaryFoodPage.NewProductAdded(oldProduct);
+     
             NavigationService.GoBack();
         }
     }

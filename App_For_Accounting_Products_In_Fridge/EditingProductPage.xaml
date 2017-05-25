@@ -1,12 +1,12 @@
-﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.AddAvailableProductsPage"
+﻿<Page x:Class="App_For_Accounting_Products_In_Fridge.EditingProductPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:App_For_Accounting_Products_In_Fridge"
-      mc:Ignorable="d"
-         d:DesignHeight="600" d:DesignWidth="900"
-      Title="AddAvailableProductsPage">
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="EditingProductPage">
     <Page.Background>
         <ImageBrush ImageSource="C:\Users\L\Desktop\project\fridge1.jpg" TileMode="Tile"/>
     </Page.Background>
@@ -32,7 +32,7 @@
         <TextBox x:Name="textBoxName"  TextWrapping="Wrap" Text="" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,23,0.333,0"/>
         <Label x:Name="label1" Content="Введите Марку" HorizontalAlignment="Right"  VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="label2" Content="Введите вес продукта" Grid.Row="2" Grid.Column="0" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0.333,34" />
-        <Button x:Name="addButton" Content="Добавить"  Click="buttonAdd_Click"  Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" Margin="36.667,0,25,0" Width="163"/>
+        <Button x:Name="editingButton" Content="Отредактировать"  Click="buttonEdit_Click"  Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" Margin="36.667,0,25,0" Width="163"/>
         <TextBox x:Name="textBoxTradeMark" TextWrapping="Wrap" Text="" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,10,0.333,10"/>
         <TextBox x:Name="textBoxAmount"  TextWrapping="Wrap" Text="" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,0,0.333,24"/>
         <TextBox x:Name="textBoxDateOfProduction"  TextWrapping="Wrap" Text="" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="225,0,0.333,31" />
@@ -42,5 +42,6 @@
         <Label x:Name="label4" Content="Введите дату вскрытия&#xD;&#xA; упаковки"  Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="label5" Content="Введите дату истечения&#xD;&#xA;срока годности"  Grid.Row="5" Grid.Column="0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Button x:Name="goBackButton" Content="Назад"  Click="backButton_Click" Grid.Row="2"  Grid.Column="4" Margin="36.667,0,25,0" Width="163"/>
+
     </Grid>
 </Page>

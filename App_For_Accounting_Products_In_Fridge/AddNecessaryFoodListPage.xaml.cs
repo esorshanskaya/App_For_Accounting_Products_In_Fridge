@@ -61,32 +61,11 @@ private void buttonAdd_Click(object sender, RoutedEventArgs e)
             textBoxTradeMark.Text = "";
             Pages.NecessaryFoodPage.NewProductAdded(_newProduct);
             NavigationService.GoBack();
-            //         double amount;
-            //         if (string.IsNullOrWhiteSpace(textBoxName.Text))
-            // {
-
-            //     MessageBox.Show("Необходимо ввести название продукта");
-            //     textBoxName.Focus();
-            //     return;
-            // }
-
-            // if (!string.IsNullOrWhiteSpace(textBoxAmount.Text))
-            //         {
-            //             if (!double.TryParse(textBoxAmount.Text, out amount))
-            //             {
-            //                 MessageBox.Show("Некорректное значение веса");
-            //                 textBoxAmount.Focus();
-            //                 return;
-            //             }
-
-            //             return;
-            // }
-            //textBoxName.Text = "";
-            // textBoxAmount.Text = "";
-            //         textBoxTradeMark.Text = "";
-            // _newProduct = new Product(textBoxName.Text);
-            // Pages.NecessaryFoodPage.NewProductAdded(_newProduct);
-            // NavigationService.GoBack();
+          
+        }
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }
